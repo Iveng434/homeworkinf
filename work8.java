@@ -11,4 +11,13 @@ public class Cache<T> {
         this.capacity = n;
         this.storage = new LinkedList<>();
     }
+
+    public void add(T item) {
+        storage.addLast(item);
+
+        if (storage.size() > capacity) {
+            storage.removeFirst();
+        }
+    }
+    
 }
