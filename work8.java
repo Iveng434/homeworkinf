@@ -38,4 +38,10 @@ public class Cache<T> {
         }
         return storage.getLast();
     }
+    public T getItemByIndex(int i) {
+        if (i < 0 || i >= storage.size()) {
+            return null;
+        }
+        return storage.get(i);
+    }
 }
