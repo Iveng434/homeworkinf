@@ -32,4 +32,10 @@ public class Cache<T> {
         }
         return storage.getFirst();
     }
+    public T getLast() {
+        if (storage.isEmpty()) {
+            return null;
+        }
+        return storage.getLast();
+    }
 }
