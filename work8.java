@@ -20,4 +20,8 @@ public class Cache<T> {
         }
     }
     
+    public boolean remove(T item) {
+        return storage.remove(item);
+    }
+
 }
