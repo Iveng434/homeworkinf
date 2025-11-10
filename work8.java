@@ -26,5 +26,10 @@ public class Cache<T> {
     public boolean exists(T item) {
         return storage.contains(item);
     }
-
+    public T getFirst() {
+        if (storage.isEmpty()) {
+            return null;
+        }
+        return storage.getFirst();
+    }
 }
